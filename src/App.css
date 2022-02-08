@@ -9,8 +9,9 @@
     position: fixed;
     top: 0;
     backdrop-filter: blur(10px);
-    padding-top: 1vh;
-    width: 640px;
+    width: 100%;
+    max-width: 640px;
+    padding: 15px 2vw 0;
 }
  .Navigation__Links-First{
     margin-right: 3vw;
@@ -21,4 +22,21 @@
 }
  .Navigation__Links {
     margin: 0 1vw;
+}
+.Navigation-Desk{
+    display: flex;
+}
+.Navigation-Mobile {
+    display: none;
+}
+
+
+@media(max-width: 640px) {
+    .Navigation-Mobile {
+        display: block;
+    }
+    .Navigation-Desk{
+        display: none;
+    }
+
 }

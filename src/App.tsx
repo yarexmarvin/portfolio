@@ -15,7 +15,7 @@ import {
 import { ColorModeSwitcher } from "./ColorModeSwitcher"
 import { Logo } from "./Logo"
 import stickerHi from './assets/img/stickerMac.png'
-import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom"
 import Navigation from "./components/Navigation"
 import Main from "./components/Main"
 import Skills from "./components/Skills"
@@ -26,7 +26,7 @@ export const App = () => {
 
   return (
     <ChakraProvider >
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter basename={process.env.PUBLIC_URL}>
     <Routes>
       <Route path='/' element={<Navigation />}>
         <Route index element={<Main />} />
@@ -36,7 +36,7 @@ export const App = () => {
       </Route>
     </Routes>
     
-    </BrowserRouter>
+    </HashRouter>
   
  </ChakraProvider>
 )

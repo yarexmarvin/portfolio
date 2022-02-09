@@ -4,18 +4,22 @@
     /* justify-content: center; */
     align-items: center;
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    min-height: 100vh;
 }
 .Wrapper-Inner {
     max-width: 60%;
     width: 100%;
 
 }
+.Page-Wrapper{
+    margin-top: 15vh;
+}
 /* navigation */
 .Navigation{
-    /* position: fixed; */
-    /* top: 0; */
-    /* backdrop-filter: blur(10px); */
+    position: fixed;
+    top: 0;
+    backdrop-filter: blur(10px);
     width: 100%;
     padding: 15px 0;
 }
@@ -48,13 +52,14 @@
 }
 .Navigation-Mobile {
     display: none;
+    margin-left: 3vw;
 }
 
 
 /* intro */
 .Introduction{
     display: flex;
-    margin-top: 5vh;
+    /* margin-top: 5vh; */
     /* justify-content: space-between; */
     width: 100%;
 }
@@ -73,6 +78,32 @@
 .Tech-Icon {
     margin: 0 3px;
 }
+.Summary {
+    margin-top: 5vh;
+}
+.Summary__Text{
+    margin-top: 1vh;
+}
+.Download-Btns{
+    display: flex;
+    justify-content: space-between;
+    margin: 5vh 0 2vh;
+}
+.Skills{
+    margin-top: 5vh;
+}
+.Skills__List{
+    margin: 15px 0;
+}
+.ListItem-VK{
+    display: flex;
+    align-items: center;
+}
+.ListItem-VK .Icon--logo_vk_16 svg, 
+.ListItem-VK .Icon--logo_vk_outline_24 svg {
+    margin: 0 2px;
+}
+
 
 
 @media(max-width:960px){
@@ -94,13 +125,30 @@
     .Navigation-Desk{
         display: none;
     }
+    .Navigation__Links-First .chakra-heading{
+        display: none;
+    }
     .Introduction{
         flex-direction: column;
         align-items: center;
     }
     .Introduction .chakra-heading,
     .Introduction .chakra-text,
-    .Introduction__Description{
+    .Introduction__Text,
+    .Summary__Heading,
+    .Summary__Text{
         text-align: center;
+    }
+    .Introduction__Description .chakra-code{
+        width: 100%;
+    }
+    .Download-Btns{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5vh;
+    }
+    .Download-Btns button{
+        margin: 10px 0;
     }
 }

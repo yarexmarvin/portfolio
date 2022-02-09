@@ -1,5 +1,7 @@
 import {
+    Button,
   Code,
+  Divider,
   Heading,
   Icon,
   Image,
@@ -27,11 +29,14 @@ import {
   SiGithub,
 } from "react-icons/si";
 import { MdAlternateEmail } from "react-icons/md";
+import {GrDocumentDownload} from "react-icons/gr";
+import {IoDownloadOutline, IoDownloadSharp}from "react-icons/io5"
 
 const Main: FC = () => {
   const borderColor = useColorModeValue("#CBD5E0", "rgba(255,255,255,0.7)");
   return (
     <div className="Page-Wrapper Wrapper-Inner">
+
       <div className="Introduction">
         <Image
           border={`5px solid ${borderColor}`}
@@ -40,7 +45,7 @@ const Main: FC = () => {
         />
         <div className="Introduction__Text">
           <Heading>Hi! I'm Yarex</Heading>
-          <Text className="Introduction__Occupation">frontend developer</Text>
+          <Text as="kbd" className="Introduction__Occupation">Frontend Developer</Text>
           <List className="Introduction__Description">
             <ListItem>
               <Code colorScheme="green">
@@ -88,6 +93,16 @@ const Main: FC = () => {
             </ListItem>
           </List>
         </div>
+      </div>
+
+      <div className="Summary">
+          <Heading size='lg' className="Summary__Heading">Summary</Heading>
+          <Text className="Summary__Text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis amet corporis tenetur dolore nostrum voluptatum ex porro voluptatibus, molestias repellendus suscipit eius deserunt cum natus optio doloremque, reprehenderit voluptate deleniti laudantium in itaque. Non dolor obcaecati nostrum sunt possimus tempora nihil aliquid officiis tenetur laudantium dolore cum et, quas quisquam sit cupiditate similique aspernatur consequuntur excepturi hic pariatur.</Text>
+      </div>
+
+      <div className="Download-Btns">
+          <Button variant='outline' colorScheme='green' rightIcon={<IoDownloadOutline/>}> Download CV</Button>
+          <Button variant='ghost' colorScheme='facebook' rightIcon={<IoDownloadSharp/>} >Download Cover Letter</Button>
       </div>
     </div>
   );

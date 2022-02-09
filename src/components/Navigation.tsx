@@ -23,30 +23,32 @@ import navImg from "../assets/img/stickerSmile.png";
 
 const Navigation: FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const bg = useColorModeValue('white', 'linear-gradient(20deg, rgb(33, 33, 33), rgb(66, 66, 66))');
-  const txt = useColorModeValue( 'rgb(33, 33, 33)', 'white');
+  const bg = useColorModeValue(
+    "white",
+    "linear-gradient(20deg, rgb(33, 33, 33), rgb(66, 66, 66))"
+  );
+  const txt = useColorModeValue("rgb(33, 33, 33)", "white");
   const navigate = useNavigate();
   return (
-    <div className="Wrapper" style={{background: bg, color: txt}}>
+    <div className="Wrapper" style={{ background: bg, color: txt }}>
       <div className="Navigation Wrapper-Inner">
         <HStack justifyContent="space-between">
+          <NavLink className="Navigation__Links-First" to="/" replace>
+            <Box display="flex">
+              <Avatar
+                bg="transparent"
+                src={navImg}
+                marginRight="0.5vh"
+                size="sm"
+              />
+              <Link>
+                <Heading letterSpacing="0.2px" size="sm">
+                  Yarex Marvin
+                </Heading>
+              </Link>
+            </Box>
+          </NavLink>
           <div className="Navigation-Desk">
-            <NavLink className="Navigation__Links-First" to="/" replace>
-              <Box display="flex">
-                <Avatar
-                  bg="transparent"
-                  src={navImg}
-                  marginRight="0.5vh"
-                  size="sm"
-                />
-                <Link>
-                  <Heading letterSpacing="0.2px" size="sm">
-                    Yarex Marvin
-                  </Heading>
-                </Link>
-              </Box>
-            </NavLink>
-
             <NavLink className="Navigation__Links" to="skills">
               <Button height="unset" colorScheme="gray" variant="ghost">
                 Skills
@@ -65,24 +67,29 @@ const Navigation: FC = () => {
               </Button>
             </NavLink>
           </div>
-          <div className="Navigation-Mobile">
-            <Menu>
-              <MenuButton
-                as={IconButton}
-                aria-label="Options"
-                icon={<HamburgerIcon />}
-                variant="outline"
-              />
-              <MenuList>
-                <MenuItem onClick={() => navigate("skills")}>Skills</MenuItem>
-                <MenuItem onClick={() => navigate("experience")}>
-                  Experience
-                </MenuItem>
-                <MenuItem onClick={() => navigate("contact")}>Contact</MenuItem>
-              </MenuList>
-            </Menu>
-          </div>
-          <ColorModeSwitcher justifySelf="flex-end" />
+          <Box display='flex'>
+            <ColorModeSwitcher justifySelf="flex-end" />
+
+            <div className="Navigation-Mobile">
+              <Menu>
+                <MenuButton
+                  as={IconButton}
+                  aria-label="Options"
+                  icon={<HamburgerIcon />}
+                  variant="outline"
+                />
+                <MenuList>
+                  <MenuItem onClick={() => navigate("skills")}>Skills</MenuItem>
+                  <MenuItem onClick={() => navigate("experience")}>
+                    Experience
+                  </MenuItem>
+                  <MenuItem onClick={() => navigate("contact")}>
+                    Contact
+                  </MenuItem>
+                </MenuList>
+              </Menu>
+            </div>
+          </Box>
         </HStack>
       </div>
 

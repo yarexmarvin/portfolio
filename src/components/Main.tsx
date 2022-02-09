@@ -44,7 +44,7 @@ const Main: FC = () => {
           src={mainImg}
         />
         <div className="Introduction__Text">
-          <Heading>Hi! I'm Yarex</Heading>
+          <Heading className="Introduction__Header">Hi! I'm Yarex</Heading>
           <Text as="kbd" className="Introduction__Occupation">Frontend Developer</Text>
           <List className="Introduction__Description">
             <ListItem>

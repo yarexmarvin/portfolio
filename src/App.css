@@ -125,8 +125,11 @@
 .Skills__Environiment .chakra-kbd {
   margin: 5px 3px;
 }
+.Skills-Wrapper-Inner{
+    margin-right: 10px;
+}
 .Skills__Img {
-  margin: 3vh auto 0;
+  margin: 0 auto;
 }
 .Skills-Wrapper {
   display: flex;

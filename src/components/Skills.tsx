@@ -55,8 +55,8 @@ const Skills: FC = () => {
     <div className="Page-Wrapper Wrapper-Inner">
       <div className="Skills-Wrapper">
         <div className="Skills-Wrapper-Inner">
-          <Heading>I am a Frontend Developer: </Heading>
-          <Text className="Skills__Text">
+          <Heading>I am a Frontend&nbsp;Developer: </Heading>
+          <Text as="kbd" className="Skills__Text">
             I turn ideas and layouts into websites web applications, embodying
             them into interactive <Kbd>User</Kbd> + <Kbd>Interfaces</Kbd>{" "}
             connected to the server.
@@ -88,7 +88,7 @@ const Skills: FC = () => {
       </div>
 
       <Heading className="Skills__Heading" size="lg">
-        Technologies:
+        What I use:
       </Heading>
       <div className="Skills">
         <List className="Skills__List">

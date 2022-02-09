@@ -26,9 +26,9 @@ export const App = () => {
 
   return (
     <ChakraProvider theme={theme}>
-    <HashRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter >
     <Routes>
-      <Route path='/' element={<Navigation />}>
+      <Route path='' element={<Navigation />}>
         <Route index element={<Main />} />
         <Route path='skills' element={<Skills />} />
         <Route path='experience' element={<Experience />} />

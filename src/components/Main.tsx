@@ -97,7 +97,7 @@ const Main: FC = () => {
 
       <div className="Summary">
           <Heading size='lg' className="Summary__Heading">Summary</Heading>
-          <Text className="Summary__Text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis amet corporis tenetur dolore nostrum voluptatum ex porro voluptatibus, molestias repellendus suscipit eius deserunt cum natus optio doloremque, reprehenderit voluptate deleniti laudantium in itaque. Non dolor obcaecati nostrum sunt possimus tempora nihil aliquid officiis tenetur laudantium dolore cum et, quas quisquam sit cupiditate similique aspernatur consequuntur excepturi hic pariatur.</Text>
+          <Text as="kbd" className="Summary__Text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis amet corporis tenetur dolore nostrum voluptatum ex porro voluptatibus, molestias repellendus suscipit eius deserunt cum natus optio doloremque, reprehenderit voluptate deleniti laudantium in itaque. Non dolor obcaecati nostrum sunt possimus tempora nihil aliquid officiis tenetur laudantium dolore cum et, quas quisquam sit cupiditate similique aspernatur consequuntur excepturi hic pariatur.</Text>
       </div>
 
       <div className="Download-Btns">

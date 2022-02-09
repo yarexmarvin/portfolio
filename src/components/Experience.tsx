@@ -1,5 +1,5 @@
 import {
-    Code,
+  Code,
   Heading,
   Image,
   Link,
@@ -7,6 +7,7 @@ import {
   ListIcon,
   ListItem,
   Tag,
+  Text,
 } from "@chakra-ui/react";
 import { FC } from "react";
 import devstars from "../assets/img/devstars.jpeg";
@@ -59,21 +60,33 @@ const Experience: FC = () => {
         </div>
         <div className="Experience__Text">
           <List>
-          <ListItem>
+            <ListItem>
               <ListIcon as={GoGear} />
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. <Code>Ducimus, sit!</Code> Lorem ipsum dolor. Lorem, ipsum.
+              <Text as="kbd">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.{" "}
+                <Code>Ducimus, sit!</Code> Lorem ipsum dolor. Lorem, ipsum.
+              </Text>
             </ListItem>
             <ListItem>
               <ListIcon color="whatsapp.300" as={GoGear} />
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus, sit! Lorem, ipsum dolor.
+              <Text as="kbd">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.{" "}
+                <Code>Ducimus, sit!</Code> Lorem ipsum dolor. Lorem, ipsum.
+              </Text>
             </ListItem>
             <ListItem>
               <ListIcon as={GoGear} />
-              Lorem ipsum dolor sit, <Code> amet consectetur </Code>  adipisicing elit. Ducimus, sit! Lorem ipsum dolor sit amet.
+              <Text as="kbd">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.{" "}
+                <Code>Ducimus, sit!</Code> Lorem ipsum dolor. Lorem, ipsum.
+              </Text>
             </ListItem>
             <ListItem>
               <ListIcon as={GoGear} />
-              Lorem <Code>ipsum dolor </Code> sit, amet consectetur adipisicing elit. Ducimus, sit!
+              <Text as="kbd">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.{" "}
+                <Code>Ducimus, sit!</Code> Lorem ipsum dolor. Lorem, ipsum.
+              </Text>
             </ListItem>
           </List>
         </div>

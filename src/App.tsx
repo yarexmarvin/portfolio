@@ -25,8 +25,8 @@ import Contact from "./components/Contact"
 export const App = () => {
 
   return (
-    <ChakraProvider >
-    <HashRouter basename={process.env.PUBLIC_URL}>
+    <ChakraProvider theme={theme}>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
     <Routes>
       <Route path='/' element={<Navigation />}>
         <Route index element={<Main />} />
@@ -36,7 +36,7 @@ export const App = () => {
       </Route>
     </Routes>
     
-    </HashRouter>
+    </BrowserRouter>
   
  </ChakraProvider>
 )

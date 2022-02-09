@@ -26,17 +26,17 @@ export const App = () => {
 
   return (
     <ChakraProvider theme={theme}>
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter basename={process.env.PUBLIC_URL}>
     <Routes>
       <Route path='/' element={<Navigation />}>
         <Route index element={<Main />} />
-        <Route path='/skills' element={<Skills />} />
-        <Route path='/experience' element={<Experience />} />
-        <Route path='/contact' element={<Contact />} />
+        <Route path='skills' element={<Skills />} />
+        <Route path='experience' element={<Experience />} />
+        <Route path='contact' element={<Contact />} />
       </Route>
     </Routes>
     
-    </BrowserRouter>
+    </HashRouter>
   
  </ChakraProvider>
 )

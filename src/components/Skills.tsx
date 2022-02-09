@@ -46,37 +46,46 @@ import { FiFigma } from "react-icons/fi";
 import { DiNpm } from "react-icons/di";
 import { MdHttp } from "react-icons/md";
 import stickerCalm from "../assets/img/stickerCalm.png";
-import stickerIdea from '../assets/img/stickerIdea.png'
+import stickerIdea from "../assets/img/stickerIdea.png";
+import stickerMac from "../assets/img/stickerMac.png";
 
 const Skills: FC = () => {
   const borderColor = useColorModeValue("#CBD5E0", "rgba(255,255,255,0.7)");
   return (
     <div className="Page-Wrapper Wrapper-Inner">
-      <Heading>I am a Frontend Developer: </Heading>
-      <Text className="Skills__Text">
-        I turn ideas and layouts into websites
-        web applications,
-        embodying them into interactive <Kbd>User</Kbd> + <Kbd>Interfaces</Kbd>{" "}
-        connected to the server.
-      </Text>
-
-      <List className="Skills__Environiment">
-        <ListItem>
-          <Heading size="sm">
-            <ListIcon as={GoBrowser} />
-            for browser environment:
-          </Heading>
-          <Kbd>
-            Desktop <ListIcon as={BsDisplay} />{" "}
-          </Kbd>
-          <Kbd>
-            Tablet <ListIcon as={BsTabletLandscape} />
-          </Kbd>
-          <Kbd>
-            Mobile <ListIcon as={BsPhone} />
-          </Kbd>
-        </ListItem>
-      </List>
+      <div className="Skills-Wrapper">
+        <div className="Skills-Wrapper-Inner">
+          <Heading>I am a Frontend Developer: </Heading>
+          <Text className="Skills__Text">
+            I turn ideas and layouts into websites web applications, embodying
+            them into interactive <Kbd>User</Kbd> + <Kbd>Interfaces</Kbd>{" "}
+            connected to the server.
+          </Text>
+          <List className="Skills__Environiment">
+            <ListItem>
+              <Heading size="sm">
+                <ListIcon as={GoBrowser} />
+                for browser environment:
+              </Heading>
+              <Kbd>
+                Desktop <ListIcon as={BsDisplay} />{" "}
+              </Kbd>
+              <Kbd>
+                Tablet <ListIcon as={BsTabletLandscape} />
+              </Kbd>
+              <Kbd>
+                Mobile <ListIcon as={BsPhone} />
+              </Kbd>
+            </ListItem>
+          </List>
+        </div>
+        <Image
+          className="Skills__Img"
+          border={`5px solid ${borderColor}`}
+          boxSize={200}
+          src={stickerMac}
+        />
+      </div>
 
       <Heading className="Skills__Heading" size="lg">
         Technologies:
@@ -187,6 +196,7 @@ const Skills: FC = () => {
           </ListItem>
         </List>
         <Image
+          className="Skills__Img"
           border={`5px solid ${borderColor}`}
           boxSize={200}
           src={stickerCalm}
@@ -237,10 +247,7 @@ const Skills: FC = () => {
             </Code>
           </ListItem>
         </List>
-        <Image
-          boxSize={150}
-          src={stickerIdea}
-        />
+        <Image className="Skills__Img" boxSize={150} src={stickerIdea} />
       </div>
     </div>
   );

@@ -56,8 +56,8 @@
   display: none;
   margin-left: 3vw;
 }
-.Navigation-Mobile .chakra-menu__menu-list{
-    background:  rgb(66, 66, 66)
+.Navigation-Mobile .chakra-menu__menu-list {
+  background: rgb(66, 66, 66);
 }
 
 /* intro */
@@ -107,6 +107,11 @@
 .Skills__List li {
   margin: 3px 0;
 }
+.Skills__Environiment .chakra-kbd{
+    margin-inline-end: unset;
+    margin: 5px 0;
+}
+
 .ListItem-VK .chakra-code,
 .ListItem-VK {
   display: flex;
@@ -118,7 +123,14 @@
 }
 .Skills__List .chakra-code,
 .Skills__Environiment .chakra-kbd {
-  margin: 0 3px;
+  margin: 5px 3px;
+}
+.Skills__Img {
+  margin: 3vh auto 0;
+}
+.Skills-Wrapper {
+  display: flex;
+  align-items: center;
 }
 
 .Skills__Environiment {
@@ -126,6 +138,8 @@
 }
 .Skills__Environiment li {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 /* experience */
@@ -152,10 +166,9 @@
 }
 .Contact-List li {
   margin: 15px 0;
-
 }
-.Contact-List button{
-    width: 100%;
+.Contact-List button {
+  width: 100%;
 }
 .Contact-Wrapper {
   display: flex;
@@ -199,8 +212,8 @@
   .Introduction__Description .chakra-code {
     width: 100%;
   }
-  .Introduction__Header{
-      margin-top: 1vh;
+  .Introduction__Header {
+    margin-top: 1vh;
   }
   .Download-Btns {
     display: flex;
@@ -214,6 +227,7 @@
   .Skills__Environiment li {
     display: block;
   }
+
   .Page-Wrapper .chakra-heading {
     text-align: center;
   }
@@ -232,12 +246,15 @@
     align-items: center;
   }
   .Skills img {
-    margin: 30px 0 0 ;
+    margin: 30px 0 0;
   }
   .Skills__Text {
     text-align: center;
   }
   .Contact-Wrapper {
+    flex-direction: column;
+  }
+  .Skills-Wrapper {
     flex-direction: column;
   }
 }

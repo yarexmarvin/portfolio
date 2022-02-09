@@ -95,6 +95,10 @@
 .Skills__List{
     margin: 15px 0;
 }
+.Skills__List li{
+    margin: 3px 0;
+}
+.ListItem-VK .chakra-code,
 .ListItem-VK{
     display: flex;
     align-items: center;
@@ -103,8 +107,37 @@
 .ListItem-VK .Icon--logo_vk_outline_24 svg {
     margin: 0 2px;
 }
+.Skills__List .chakra-code,
+.Skills__Environiment .chakra-kbd{
+    margin: 0 3px;
+}
+.Skills__Environiment .chakra-kbd svg{
+    margin-inline-end: unset;
+}
+.Skills__Environiment{
+    margin-top: 5vh;
+}
+.Skills__Environiment li{
+    display: flex;
+}
 
-
+/* experience */
+.Experience-Wrapper{
+    margin-top: 5vh;
+}
+.Experience__Inner{
+    display: flex;
+    align-items: center;
+}
+.Experience__Description{
+    margin-left: 2vw;
+}
+.Experience__Text{
+    margin-top: 2vh;
+}
+.Experience__Description span{
+    margin: 2px 0;
+}
 
 @media(max-width:960px){
     .Wrapper-Inner{
@@ -150,5 +183,18 @@
     }
     .Download-Btns button{
         margin: 10px 0;
+    }
+    .Skills__Environiment li{
+       display: block;
+    }
+    .Page-Wrapper .chakra-heading{
+        text-align: center;
+    }
+    .Experience__Description{
+        margin-top: 2vh;
+    }
+    .Experience__Inner{
+        display: flex;
+        flex-direction: column;
     }
 }

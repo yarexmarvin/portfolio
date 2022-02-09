@@ -1,5 +1,6 @@
 import {
   Avatar,
+  background,
   Box,
   Button,
   Flex,
@@ -12,6 +13,7 @@ import {
   MenuItem,
   MenuList,
   Text,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import { FC, useState } from "react";
@@ -21,10 +23,12 @@ import navImg from "../assets/img/stickerSmile.png";
 
 const Navigation: FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const bg = useColorModeValue('white', 'linear-gradient(20deg, rgb(33, 33, 33), rgb(66, 66, 66))');
+  const txt = useColorModeValue( 'rgb(33, 33, 33)', 'white');
   const navigate = useNavigate();
   return (
-    <div className="Wrapper">
-      <div className="Navigation">
+    <div className="Wrapper" style={{background: bg, color: txt}}>
+      <div className="Navigation Wrapper-Inner">
         <HStack justifyContent="space-between">
           <div className="Navigation-Desk">
             <NavLink className="Navigation__Links-First" to="/" replace>

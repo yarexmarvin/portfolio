@@ -25,7 +25,7 @@ import Contact from "./components/Contact"
 export const App = () => {
 
   return (
-    <ChakraProvider theme={theme}  >
+    <ChakraProvider >
     <BrowserRouter>
     <Routes>
       <Route path='/' element={<Navigation />}>

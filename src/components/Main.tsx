@@ -46,12 +46,13 @@ const Main: FC = () => {
               <Code colorScheme="green">
                 <ListIcon as={AiOutlineCode} />
                 current stack {"  "}
+              
+              <ListIcon fontSize="sm" className="Tech-Icon" as={SiTypescript} />
+              <ListIcon className="Tech-Icon" as={SiReact} />
+              <ListIcon className="Tech-Icon" as={SiRedux} />
+              <ListIcon className="Tech-Icon" as={SiHtml5} />
+              <ListIcon className="Tech-Icon" as={SiCss3} />
               </Code>
-              <Icon fontSize="sm" className="Tech-Icon" as={SiTypescript} />
-              <Icon className="Tech-Icon" as={SiReact} />
-              <Icon className="Tech-Icon" as={SiRedux} />
-              <Icon className="Tech-Icon" as={SiHtml5} />
-              <Icon className="Tech-Icon" as={SiCss3} />
             </ListItem>
             <ListItem>
               <Code colorScheme="yellow">
@@ -72,17 +73,18 @@ const Main: FC = () => {
               <Code colorScheme={"messenger"}>
                 <ListIcon as={IoLanguageSharp} />
                 languages
+              {"  "}russian 🇷🇺  english 🇺🇸
               </Code>
-              {"  "}russian 🇷🇺 , english 🇺🇸
             </ListItem>
             <ListItem>
               <Code>
                 <ListIcon as={MdAlternateEmail} />
                 email {"  "} 
-              </Code>
               <Link href="mailto:yarexmarvin@yahoo.com" isExternal>
                 yarexmarvin@yahoo.com
               </Link>
+              </Code>
+
             </ListItem>
           </List>
         </div>

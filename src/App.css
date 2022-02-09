@@ -1,20 +1,23 @@
 .Wrapper{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 /* navigation */
 .Navigation{
-    position: fixed;
-    top: 0;
-    backdrop-filter: blur(10px);
+    /* position: fixed; */
+    /* top: 0; */
+    /* backdrop-filter: blur(10px); */
     width: 100%;
-    max-width: 640px;
-    padding: 15px 2vw 0;
+    max-width: 60%;
+    padding: 15px 0;
 }
  .Navigation__Links-First{
     margin-right: 3vw;
+    display: flex;
+    align-items: center;
 }
  .Navigation__Links-First .chakra-link{
     display: flex;
@@ -22,6 +25,14 @@
 }
  .Navigation__Links {
     margin: 0 1vw;
+    display: flex;
+    align-items: center;
+}
+.Navigation__Links.active button{
+    background-color: rgba(255,255,255,0.3);
+}
+.Navigation__Links button{
+    padding: 7px 10px;
 }
 .Navigation-Desk{
     display: flex;
@@ -31,7 +42,16 @@
 }
 
 
-@media(max-width: 640px) {
+@media(max-width:960px){
+    .Navigation{
+        max-width: 80%;
+    }
+}
+@media(max-width: 660px) {
+    .Navigation{
+        max-width: 90%;
+        padding: 15px 2vw 0;
+    }
     .Navigation-Mobile {
         display: block;
     }

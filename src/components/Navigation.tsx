@@ -42,30 +42,24 @@ const Navigation: FC = () => {
                 </Link>
               </Box>
             </NavLink>
-            <Button
-              className="Navigation__Links"
-              height="unset"
-              colorScheme="gray"
-              variant="ghost"
-            >
-              <NavLink to="/skills">Skills</NavLink>
-            </Button>
-            <Button
-              className="Navigation__Links"
-              height="unset"
-              colorScheme="gray"
-              variant="ghost"
-            >
-              <NavLink to="/skills">Experience</NavLink>
-            </Button>
-            <Button
-              className="Navigation__Links"
-              height="unset"
-              colorScheme="gray"
-              variant="ghost"
-            >
-              <NavLink to="/contact">Contact</NavLink>
-            </Button>
+
+            <NavLink className="Navigation__Links" to="skills">
+              <Button height="unset" colorScheme="gray" variant="ghost">
+                Skills
+              </Button>
+            </NavLink>
+
+            <NavLink className="Navigation__Links" to="experience">
+              <Button height="unset" colorScheme="gray" variant="ghost">
+                Experience
+              </Button>
+            </NavLink>
+
+            <NavLink className="Navigation__Links" to="contact">
+              <Button height="unset" colorScheme="gray" variant="ghost">
+                Contact
+              </Button>
+            </NavLink>
           </div>
           <div className="Navigation-Mobile">
             <Menu>
@@ -76,15 +70,11 @@ const Navigation: FC = () => {
                 variant="outline"
               />
               <MenuList>
-                <MenuItem onClick={() => navigate("skills")}>
-                  Skills
-                </MenuItem>
-                <MenuItem  onClick={() => navigate("experience")}>
+                <MenuItem onClick={() => navigate("skills")}>Skills</MenuItem>
+                <MenuItem onClick={() => navigate("experience")}>
                   Experience
                 </MenuItem>
-                <MenuItem  onClick={() => navigate("contact")}>
-                  Contact
-                </MenuItem>
+                <MenuItem onClick={() => navigate("contact")}>Contact</MenuItem>
               </MenuList>
             </Menu>
           </div>

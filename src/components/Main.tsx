@@ -1,5 +1,5 @@
 import {
-    Button,
+  Button,
   Code,
   Divider,
   Heading,
@@ -9,17 +9,18 @@ import {
   List,
   ListIcon,
   ListItem,
+  Tag,
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
 import { FC } from "react";
 import mainImg from "../assets/img/stickerHi.png";
-import { BsDisplay,BsCodeSquare } from "react-icons/bs";
-import { AiFillCode,AiOutlineCode } from "react-icons/ai";
+import { BsDisplay, BsCodeSquare } from "react-icons/bs";
+import { AiFillCode, AiOutlineCode } from "react-icons/ai";
 import { IoLanguageSharp } from "react-icons/io5";
 import { BsPersonCircle } from "react-icons/bs";
 import { BiBuilding } from "react-icons/bi";
-import { HiCode} from "react-icons/hi"
+import { HiCode } from "react-icons/hi";
 import {
   SiTypescript,
   SiRedux,
@@ -29,14 +30,13 @@ import {
   SiGithub,
 } from "react-icons/si";
 import { MdAlternateEmail } from "react-icons/md";
-import {GrDocumentDownload} from "react-icons/gr";
-import {IoDownloadOutline, IoDownloadSharp}from "react-icons/io5"
+import { GrDocumentDownload } from "react-icons/gr";
+import { IoDownloadOutline, IoDownloadSharp } from "react-icons/io5";
 
 const Main: FC = () => {
   const borderColor = useColorModeValue("#CBD5E0", "rgba(255,255,255,0.7)");
   return (
     <div className="Page-Wrapper Wrapper-Inner">
-
       <div className="Introduction">
         <Image
           border={`5px solid ${borderColor}`}
@@ -45,18 +45,23 @@ const Main: FC = () => {
         />
         <div className="Introduction__Text">
           <Heading className="Introduction__Header">Hi! I'm Yarex</Heading>
-          <Text as="kbd" className="Introduction__Occupation">Frontend Developer</Text>
+          <Text as="kbd" className="Introduction__Occupation">
+            Frontend Developer
+          </Text>
           <List className="Introduction__Description">
             <ListItem>
               <Code colorScheme="green">
                 <ListIcon as={AiOutlineCode} />
                 current stack {"  "}
-              
-              <ListIcon fontSize="sm" className="Tech-Icon" as={SiTypescript} />
-              <ListIcon className="Tech-Icon" as={SiReact} />
-              <ListIcon className="Tech-Icon" as={SiRedux} />
-              <ListIcon className="Tech-Icon" as={SiHtml5} />
-              <ListIcon className="Tech-Icon" as={SiCss3} />
+                <ListIcon
+                  fontSize="sm"
+                  className="Tech-Icon"
+                  as={SiTypescript}
+                />
+                <ListIcon className="Tech-Icon" as={SiReact} />
+                <ListIcon className="Tech-Icon" as={SiRedux} />
+                <ListIcon className="Tech-Icon" as={SiHtml5} />
+                <ListIcon className="Tech-Icon" as={SiCss3} />
               </Code>
             </ListItem>
             <ListItem>
@@ -78,31 +83,54 @@ const Main: FC = () => {
               <Code colorScheme={"messenger"}>
                 <ListIcon as={IoLanguageSharp} />
                 languages
-              {"  "}russian 🇷🇺  english 🇺🇸
+                {"  "}russian 🇷🇺 english 🇺🇸
               </Code>
             </ListItem>
             <ListItem>
               <Code>
                 <ListIcon as={MdAlternateEmail} />
-                email {"  "} 
-              <Link href="mailto:yarexmarvin@yahoo.com" isExternal>
-                yarexmarvin@yahoo.com
-              </Link>
+                email {"  "}
+                <Link href="mailto:yarexmarvin@yahoo.com" isExternal>
+                  yarexmarvin@yahoo.com
+                </Link>
               </Code>
-
             </ListItem>
           </List>
         </div>
       </div>
 
       <div className="Summary">
-          <Heading size='lg' className="Summary__Heading">Summary</Heading>
-          <Text as="kbd" className="Summary__Text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis amet corporis tenetur dolore nostrum voluptatum ex porro voluptatibus, molestias repellendus suscipit eius deserunt cum natus optio doloremque, reprehenderit voluptate deleniti laudantium in itaque. Non dolor obcaecati nostrum sunt possimus tempora nihil aliquid officiis tenetur laudantium dolore cum et, quas quisquam sit cupiditate similique aspernatur consequuntur excepturi hic pariatur.</Text>
+        <Heading size="lg" className="Summary__Heading">
+          Summary
+        </Heading>
+        <Text className="Summary__Text">
+          Responsible <Code colorScheme='blue'>Frontend Developer</Code> with experience in cross-platform
+          development of embedded applications based on <Tag colorScheme='yellow'>modern tools</Tag>  for
+          creating interactive <Tag colorScheme='purple' >User Interfaces</Tag>: JavaScript / TypeScript with
+          React and Redux / MobX (using HTML, CSS as well); <br /> Able and prefer to work
+          <Code colorScheme='green' >remotely</Code> and complete work on time. Passionate about <Code>solving problems</Code>,
+          fixing <Tag colorScheme='red'>bugs</Tag>, and translating <Tag colorScheme='pink'>astonishing</Tag>layouts and ideas into
+          finished applications. <br /> Striving to be <Code colorScheme='cyan'>an expert</Code> in frontend development.
+          Having a positive attitude towards constructive criticism, I perceive it as an indispensable and <Tag colorScheme='orange'>powerful accelerator</Tag> for the rapid growth of my skills.
+        </Text>
       </div>
 
       <div className="Download-Btns">
-          <Button variant='outline' colorScheme='green' rightIcon={<IoDownloadOutline/>}> Download CV</Button>
-          <Button variant='ghost' colorScheme='facebook' rightIcon={<IoDownloadSharp/>} >Download Cover Letter</Button>
+        <Button
+          variant="outline"
+          colorScheme="green"
+          rightIcon={<IoDownloadOutline />}
+        >
+          {" "}
+          Download CV
+        </Button>
+        <Button
+          variant="ghost"
+          colorScheme="facebook"
+          rightIcon={<IoDownloadSharp />}
+        >
+          Download Cover Letter
+        </Button>
       </div>
     </div>
   );

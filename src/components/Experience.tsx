@@ -8,6 +8,7 @@ import {
   ListItem,
   Tag,
   Text,
+  theme,
 } from "@chakra-ui/react";
 import { FC } from "react";
 import devstars from "../assets/img/devstars.jpeg";
@@ -62,31 +63,23 @@ const Experience: FC = () => {
           <List>
             <ListItem>
               <ListIcon as={GoGear} />
-              <Text as="kbd">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.{" "}
-                <Code>Ducimus, sit!</Code> Lorem ipsum dolor. Lorem, ipsum.
-              </Text>
-            </ListItem>
-            <ListItem>
-              <ListIcon color="whatsapp.300" as={GoGear} />
-              <Text as="kbd">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.{" "}
-                <Code>Ducimus, sit!</Code> Lorem ipsum dolor. Lorem, ipsum.
-              </Text>
+              developing embedded cross-platform applications for <Tag colorScheme='blue'>VK.com</Tag>
             </ListItem>
             <ListItem>
               <ListIcon as={GoGear} />
-              <Text as="kbd">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.{" "}
-                <Code>Ducimus, sit!</Code> Lorem ipsum dolor. Lorem, ipsum.
-              </Text>
+              using <Code colorScheme='facebook'>TypeScript</Code>, JavaScript, <Code colorScheme='linkedin'>React</Code> , <Tag colorScheme="purple" >Redux</Tag>, MobX, HTML and CSS in the development of applications
             </ListItem>
             <ListItem>
               <ListIcon as={GoGear} />
-              <Text as="kbd">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.{" "}
-                <Code>Ducimus, sit!</Code> Lorem ipsum dolor. Lorem, ipsum.
-              </Text>
+              interacting with <Code>REST API</Code> server using Axios
+            </ListItem>
+            <ListItem>
+              <ListIcon as={GoGear} />
+              working with other people's code
+            </ListItem>
+            <ListItem>
+              <ListIcon as={GoGear} />
+              fixing <Tag colorScheme={'red'}>bugs</Tag>
             </ListItem>
           </List>
         </div>

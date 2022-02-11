@@ -119,7 +119,7 @@ const Navigation: FC = () => {
           leastDestructiveRef={cancelRef.current}
           onClose={onClose}
         >
-          <AlertDialogOverlay>
+          <AlertDialogOverlay zIndex="99999">
             <AlertDialogContent marginTop={'20vh'} bg={bgMobMenu}>
               <AlertDialogHeader fontSize="lg" fontWeight="bold">
                 trying to change theme mode...

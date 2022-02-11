@@ -12,12 +12,16 @@ import { FC } from "react";
 import { BsDisplay, BsPhone, BsTabletLandscape } from "react-icons/bs";
 import { GoBrowser } from "react-icons/go";
 import stickerCalm from "../assets/img/stickerCalm.png";
+import stickerCalmL from "../assets/img/stickerCalmL.png";
 import stickerMac from "../assets/img/stickerMac.png";
+import stickerMacL from "../assets/img/stickerMacL.png";
 import { useAppSelector } from "../hooks/redux";
 import SkillBlock from "../blocks/SkillBlock";
 
 const Skills: FC = () => {
   const skills = useAppSelector((state) => state.skills);
+  const stickerCalmMode = useColorModeValue(stickerCalmL, stickerCalm)
+  const stickerMacMode = useColorModeValue(stickerMacL, stickerMac)
   const borderColor = useColorModeValue("#CBD5E0", "rgba(255,255,255,0.7)");
   return (
     <div className="Page-Wrapper Wrapper-Inner">
@@ -34,7 +38,7 @@ const Skills: FC = () => {
           className="Skills__Img"
           border={`5px solid ${borderColor}`}
           boxSize={200}
-          src={stickerMac}
+          src={stickerMacMode}
         />
       </div>
       <List className="Skills__Environiment">
@@ -69,7 +73,7 @@ const Skills: FC = () => {
             className="Skills__Img"
             border={`5px solid ${borderColor}`}
             boxSize={200}
-            src={stickerCalm}
+            src={stickerCalmMode}
           />
         </div>
       </div>

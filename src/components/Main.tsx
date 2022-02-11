@@ -15,6 +15,7 @@ import {
 } from "@chakra-ui/react";
 import { FC } from "react";
 import mainImg from "../assets/img/stickerHi.png";
+import mainImgL from "../assets/img/stickerHiL.png";
 import { BsDisplay } from "react-icons/bs";
 import { AiOutlineCode } from "react-icons/ai";
 import { IoLanguageSharp } from "react-icons/io5";
@@ -32,6 +33,7 @@ import { IoDownloadOutline, IoDownloadSharp } from "react-icons/io5";
 
 const Main: FC = () => {
   const borderColor = useColorModeValue("#CBD5E0", "rgba(255,255,255,0.7)");
+  const stickerImg = useColorModeValue(mainImgL, mainImg)
   const toast = useToast();
   return (
     <div className="Page-Wrapper Wrapper-Inner">
@@ -39,7 +41,7 @@ const Main: FC = () => {
         <Image
           border={`5px solid ${borderColor}`}
           boxSize={200}
-          src={mainImg}
+          src={stickerImg}
         />
         <div className="Introduction__Text">
           <Heading className="Introduction__Header">Hi! I'm Yarex</Heading>

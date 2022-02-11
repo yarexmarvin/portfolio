@@ -8,11 +8,11 @@
   min-height: 100vh;
 }
 .Wrapper-Inner {
-  max-width: 60%;
+  max-width: 50%;
   width: 100%;
 }
 .Page-Wrapper {
-  margin-top: 15vh;
+  margin-top: 11vmax;
   padding-bottom: 2vh;
 }
 /* navigation */

@@ -51,7 +51,7 @@ const Navigation: FC = () => {
 
   const navigate = useNavigate();
   return (
-    <div className="Wrapper" style={{ color: txt }}>
+    <div className="Wrapper" style={{ background:bg, color: txt }}>
       <div className="Navigation Wrapper-Inner">
         <HStack justifyContent="space-between">
           <NavLink className="Navigation__Links-First" to="/" replace>

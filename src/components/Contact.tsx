@@ -16,10 +16,12 @@ import { IoLogoWhatsapp } from "react-icons/io";
 import { Icon16LogoVk } from "@vkontakte/icons";
 import { VscGithub } from "react-icons/vsc";
 import stickerBye from "../assets/img/stickerBye.png";
+import stickerByeL from "../assets/img/stickerByeL.png";
 import stickerPhone from "../assets/img/stickerPhone.png";
 
 const Contact: FC = () => {
   const borderColor = useColorModeValue("#CBD5E0", "rgba(255,255,255,0.7)");
+  const stickerByeMode = useColorModeValue(stickerByeL, stickerBye);
 
   return (
     <div className="Page-Wrapper Wrapper-Inner">
@@ -78,7 +80,7 @@ const Contact: FC = () => {
         <Image
           border={`5px solid ${borderColor}`}
           boxSize={200}
-          src={stickerBye}
+          src={stickerByeMode}
         />
       </div>
     </div>

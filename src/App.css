@@ -106,10 +106,13 @@
 }
 .Skills__List li {
   margin: 3px 0;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
 }
-.Skills__Environiment .chakra-kbd{
-    margin-inline-end: unset;
-    margin: 5px 0;
+.Skills__Environiment .chakra-kbd {
+  margin-inline-end: unset;
+  margin: 5px 0;
 }
 
 .ListItem-VK .chakra-code,
@@ -122,14 +125,30 @@
   margin: 0 2px;
 }
 .Skills__List .chakra-code,
-.Skills__Environiment .chakra-kbd {
+.Skills__Environiment .chakra-kbd,
+.Skills__List p {
   margin: 5px 3px;
 }
-.Skills-Wrapper-Inner{
-    margin-right: 10px;
+.Skills__List li span{
+  margin: 5px 3px;
+}
+.Skills__List svg{
+  margin: 0 3px;
+}
+.Skills-Wrapper-Inner {
+  margin-right: 10px;
 }
 .Skills__Img {
   margin: 0 auto;
+}
+.Skills__Imgs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.Skills__Imgs .Skills__Img{
+  margin:  5vh 0;
 }
 .Skills-Wrapper {
   display: flex;
@@ -251,8 +270,8 @@
   .Skills img {
     margin: 30px 0 0;
   }
-  .SKills__Img{
-      margin-top: 2vh;
+  .SKills__Img {
+    margin-top: 2vh;
   }
   .Skills__Text {
     text-align: center;

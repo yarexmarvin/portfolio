@@ -156,7 +156,7 @@
 }
 
 .Skills__Environiment {
-  margin-top: 5vh;
+  margin-top: 3vh;
 }
 .Skills__Environiment li {
   display: flex;
@@ -281,5 +281,9 @@
   }
   .Skills-Wrapper {
     flex-direction: column;
+  }
+  .Skills-Wrapper-Inner{
+    text-align: center;
+    margin-bottom: 3vh;
   }
 }

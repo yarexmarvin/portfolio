@@ -21,6 +21,7 @@ import { IoLanguageSharp } from "react-icons/io5";
 import { BsPersonCircle } from "react-icons/bs";
 import { BiBuilding } from "react-icons/bi";
 import { HiCode } from "react-icons/hi";
+import { FiChevronRight } from "react-icons/fi";
 import {
   SiTypescript,
   SiRedux,
@@ -104,26 +105,45 @@ const Main: FC = () => {
           Summary
         </Heading>
         <Text className="Summary__Text">
-          Responsible <Code colorScheme='blue'>Frontend Developer</Code> with experience in cross-platform
-          development of embedded applications based on <Tag colorScheme='yellow'>modern tools</Tag>  for
-          creating interactive <Tag colorScheme='purple' >User Interfaces</Tag>: JavaScript / TypeScript with
-          React and Redux / MobX (using HTML, CSS as well); <br /> Able and prefer to work
-          <Code colorScheme='green' >remotely</Code> and complete work on time. Passionate about <Code>solving problems</Code>,
-          fixing <Tag colorScheme='red'>bugs</Tag>, and translating <Tag colorScheme='pink'>astonishing</Tag>layouts and ideas into
-          finished applications. <br /> Striving to be <Code colorScheme='cyan'>an expert</Code> in frontend development.
-          Having a positive attitude towards constructive criticism, I perceive it as an indispensable and <Tag colorScheme='orange'>powerful accelerator</Tag> for the rapid growth of my skills.
+          <Icon as={FiChevronRight} />
+          <Text as="strong">Responsible</Text>{" "}
+          <Code colorScheme="blue">Frontend Developer</Code> with experience in
+          cross-platform development of embedded applications based on{" "}
+          <Tag colorScheme="yellow">modern tools</Tag> for creating interactive{" "}
+          <Tag colorScheme="purple">User Interfaces</Tag>: JavaScript /
+          TypeScript with React and Redux / MobX
+          <br />
+          <Icon as={FiChevronRight} /> Able and prefer to work
+          <Code colorScheme="green">remotely</Code> and complete work on time.
+          <br /> <Icon as={FiChevronRight} />
+          <Text as="strong">Passionate about</Text>{" "}
+          <Code>solving problems</Code>, fixing{" "}
+          <Tag colorScheme="red">bugs</Tag>, and translating{" "}
+          <Tag colorScheme="pink">astonishing</Tag>layouts and ideas into
+          finished applications.
+          <br /> <Icon as={FiChevronRight} />
+          Striving to be <Code colorScheme="cyan">an expert</Code> in frontend
+          development. Having a positive attitude towards constructive
+          criticism, I perceive it as an indispensable and{" "}
+          <Tag colorScheme="orange">powerful accelerator</Tag> for the rapid
+          growth of my skills.
         </Text>
       </div>
 
       <div className="Download-Btns">
-        <Button
-          variant="outline"
-          colorScheme="green"
-          rightIcon={<IoDownloadOutline />}
+        <Link
+          href="https://drive.google.com/file/d/1qOCTTAxnlFr_FjyVAXlxt_EonJr74KAc/view?usp=sharing/"
+          isExternal
+          textDecoration='none'
         >
-          {" "}
+          <Button
+            variant="outline"
+            colorScheme="green"
+            rightIcon={<IoDownloadOutline />}
+          >
           Download CV
-        </Button>
+          </Button>
+        </Link>
         <Button
           variant="ghost"
           colorScheme="facebook"

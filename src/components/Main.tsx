@@ -1,7 +1,6 @@
 import {
   Button,
   Code,
-  Divider,
   Heading,
   Icon,
   Image,
@@ -12,15 +11,14 @@ import {
   Tag,
   Text,
   useColorModeValue,
+  useToast,
 } from "@chakra-ui/react";
 import { FC } from "react";
 import mainImg from "../assets/img/stickerHi.png";
-import { BsDisplay, BsCodeSquare } from "react-icons/bs";
-import { AiFillCode, AiOutlineCode } from "react-icons/ai";
+import { BsDisplay } from "react-icons/bs";
+import { AiOutlineCode } from "react-icons/ai";
 import { IoLanguageSharp } from "react-icons/io5";
-import { BsPersonCircle } from "react-icons/bs";
 import { BiBuilding } from "react-icons/bi";
-import { HiCode } from "react-icons/hi";
 import { FiChevronRight } from "react-icons/fi";
 import {
   SiTypescript,
@@ -28,14 +26,13 @@ import {
   SiReact,
   SiHtml5,
   SiCss3,
-  SiGithub,
 } from "react-icons/si";
 import { MdAlternateEmail } from "react-icons/md";
-import { GrDocumentDownload } from "react-icons/gr";
 import { IoDownloadOutline, IoDownloadSharp } from "react-icons/io5";
 
 const Main: FC = () => {
   const borderColor = useColorModeValue("#CBD5E0", "rgba(255,255,255,0.7)");
+  const toast = useToast();
   return (
     <div className="Page-Wrapper Wrapper-Inner">
       <div className="Introduction">
@@ -134,20 +131,29 @@ const Main: FC = () => {
         <Link
           href="https://drive.google.com/file/d/1qOCTTAxnlFr_FjyVAXlxt_EonJr74KAc/view?usp=sharing/"
           isExternal
-          textDecoration='none'
+          textDecoration="none"
         >
           <Button
             variant="outline"
             colorScheme="green"
             rightIcon={<IoDownloadOutline />}
           >
-          Download CV
+            Download CV
           </Button>
         </Link>
         <Button
           variant="ghost"
           colorScheme="facebook"
           rightIcon={<IoDownloadSharp />}
+          onClick={() =>
+            toast({
+              title: "Sorry, my cover letter isn't ready yet.",
+              description: "Please, try next time!",
+              status: "error",
+              duration: 5000,
+              isClosable: true,
+            })
+          }
         >
           Download Cover Letter
         </Button>

@@ -5,6 +5,7 @@ import {
   Heading,
   Image,
   Input,
+  Link,
   List,
   ListItem,
   useColorModeValue,
@@ -27,38 +28,50 @@ const Contact: FC = () => {
         <div className="Contact-Links">
           <List className="Contact-List">
             <ListItem>
-              <Button colorScheme="linkedin" rightIcon={<FaLinkedin />}>
-                LinkedIn
-              </Button>
+              <Link href="https://www.linkedin.com/in/yarexmarvin/" isExternal>
+                <Button colorScheme="linkedin" rightIcon={<FaLinkedin />}>
+                  LinkedIn
+                </Button>
+              </Link>
             </ListItem>
             <ListItem>
-              <Button
-                color="white"
-                bgColor="blackAlpha.700"
-                rightIcon={<VscGithub />}
-              >
-                GitHub
-              </Button>
+              <Link href="https://github.com/yarexmarvin/" isExternal>
+                <Button
+                  color="white"
+                  bgColor="blackAlpha.700"
+                  rightIcon={<VscGithub />}
+                >
+                  GitHub
+                </Button>
+              </Link>
             </ListItem>
             <ListItem>
-              <Button colorScheme="telegram" rightIcon={<FaTelegram />}>
-                Telegram
-              </Button>
+              <Link href="https://t.me/yarex" isExternal>
+                <Button colorScheme="telegram" rightIcon={<FaTelegram />}>
+                  Telegram
+                </Button>
+              </Link>
             </ListItem>
             <ListItem>
-              <Button colorScheme="whatsapp" rightIcon={<IoLogoWhatsapp />}>
-                WhatsApp
-              </Button>
+              <Link href="https://wa.me/79278328521" isExternal>
+                <Button colorScheme="whatsapp" rightIcon={<IoLogoWhatsapp />}>
+                  WhatsApp
+                </Button>
+              </Link>
             </ListItem>
             <ListItem>
-              <Button colorScheme="twitter" rightIcon={<Icon16LogoVk />}>
-                VK
-              </Button>
+              <Link href="https://vk.com/yarexmarvin" isExternal>
+                <Button colorScheme="twitter" rightIcon={<Icon16LogoVk />}>
+                  VK
+                </Button>
+              </Link>
             </ListItem>
             <ListItem>
-              <Button colorScheme="facebook" rightIcon={<FaFacebookSquare />}>
-                Facebook
-              </Button>
+              <Link href="https://www.facebook.com/yarexmarvin" isExternal>
+                <Button colorScheme="facebook" rightIcon={<FaFacebookSquare />}>
+                  Facebook
+                </Button>
+              </Link>
             </ListItem>
           </List>
         </div>

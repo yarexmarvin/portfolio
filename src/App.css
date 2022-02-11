@@ -56,9 +56,9 @@
   display: none;
   margin-left: 3vw;
 }
-.Navigation-Mobile .chakra-menu__menu-list {
+/* .Navigation-Mobile .chakra-menu__menu-list {
   background: rgb(66, 66, 66);
-}
+} */
 
 /* intro */
 .Introduction {
@@ -250,9 +250,12 @@
     display: block;
   }
 
-  .Page-Wrapper .chakra-heading {
+  .Page-Wrapper .chakra-heading,
+  .Skills__Text {
     text-align: center;
+    word-break: break-word;
   }
+  
   .Experience__Description {
     margin-top: 2vh;
   }
@@ -285,5 +288,8 @@
   .Skills-Wrapper-Inner{
     text-align: center;
     margin-bottom: 3vh;
+  }
+  .Skills-Wrapper-Inner{
+    margin-right: 0;
   }
 }

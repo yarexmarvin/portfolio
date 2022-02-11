@@ -23,7 +23,7 @@ const Skills: FC = () => {
     <div className="Page-Wrapper Wrapper-Inner">
       <div className="Skills-Wrapper">
         <div className="Skills-Wrapper-Inner">
-          <Heading marginBottom={2.5}>I am a Frontend&nbsp;Developer </Heading>
+          <Heading marginBottom={2.5}>I am a Frontend Developer </Heading>
           <Text as="kbd" className="Skills__Text">
             I turn ideas and layouts into websites web&nbsp;applications, embodying
             them into interactive&nbsp;<Kbd>User</Kbd>&nbsp;+&nbsp;<Kbd>Interfaces</Kbd>

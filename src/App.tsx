@@ -1,7 +1,7 @@
 import * as React from "react"
 import './App.css'
 import {
-  ChakraProvider
+  ChakraProvider, ChakraProviderProps, ColorMode, ColorModeProviderProps, GlobalStyle, ThemeComponentProps, ThemeConfig
 } from "@chakra-ui/react"
 import { ColorModeSwitcher } from "./ColorModeSwitcher"
 import { Logo } from "./Logo"
@@ -13,15 +13,46 @@ import Skills from "./components/Skills"
 import Experience from "./components/Experience"
 import Contact from "./components/Contact"
 import { extendTheme } from '@chakra-ui/react'
+import { GlobalStyleProps, GlobalStyles, mode, Styles } from "@chakra-ui/theme-tools"
 
 export const App = () => {
 
-  const config = {
+  const config: ThemeConfig = {
     initialColorMode: 'dark',
     useSystemColorMode: false,
-  }
   
-  const theme = extendTheme({ config })
+
+  }
+
+
+  const styles: GlobalStyles = {
+    global: (props) => ({
+      body: {
+        color: mode('gray.800', 'whiteAlpha.900')(props),
+        bg: mode('white', 'linear-gradient(20deg, rgb(33, 33, 33), rgb(66, 66, 66))')(props)
+      }
+    })
+  };
+
+  // const component = {
+  //   MenuList: {
+  //     baseStyle: (props: GlobalStyleProps) => ({
+  //       bg: mode('white', 'rgba(66, 66, 66)')(props)
+  //     })
+  //   }
+  // }
+  
+  
+  const theme = extendTheme({ 
+    // component,
+    config ,
+    styles,
+  })
+
+
+  
+    
+  
 
 
 

@@ -28,9 +28,11 @@ const Navigation: FC = () => {
     "linear-gradient(20deg, rgb(33, 33, 33), rgb(66, 66, 66))"
   );
   const txt = useColorModeValue("rgb(33, 33, 33)", "white");
+  const bgMobMenu = useColorModeValue('white', ' rgb(66, 66, 66)');
+
   const navigate = useNavigate();
   return (
-    <div className="Wrapper" style={{ background: bg, color: txt }}>
+    <div className="Wrapper" style={{  color: txt }}>
       <div className="Navigation Wrapper-Inner">
         <HStack justifyContent="space-between">
           <NavLink className="Navigation__Links-First" to="/" replace>
@@ -78,7 +80,7 @@ const Navigation: FC = () => {
                   icon={<HamburgerIcon />}
                   variant="outline"
                 />
-                <MenuList>
+                <MenuList background={bgMobMenu}>
                   <MenuItem onClick={() => navigate("skills")}>Skills</MenuItem>
                   <MenuItem onClick={() => navigate("experience")}>
                     Experience

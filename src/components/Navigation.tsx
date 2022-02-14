@@ -27,10 +27,11 @@ import React, { FC, useRef, useState } from "react";
 import { NavLink, Outlet, useNavigate } from "react-router-dom";
 import { ColorModeSwitcher } from "../ColorModeSwitcher";
 import navImg from "../assets/img/stickerSmile.png";
+import { VscGithub } from "react-icons/vsc";
 
 const Navigation: FC = () => {
-  const [isOpen, setIsOpen] = useState(false)
-  const onClose = () => setIsOpen(false)
+  const [isOpen, setIsOpen] = useState(false);
+  const onClose = () => setIsOpen(false);
   const cancelRef = useRef<any>();
   const bg = useColorModeValue(
     "white",
@@ -41,17 +42,17 @@ const Navigation: FC = () => {
 
   const { colorMode, toggleColorMode } = useColorMode();
 
-  function changeColor(){
-    if(colorMode === 'dark'){
-      setIsOpen(true)
-    }else {
+  function changeColor() {
+    if (colorMode === "dark") {
+      setIsOpen(true);
+    } else {
       toggleColorMode();
     }
   }
 
   const navigate = useNavigate();
   return (
-    <div className="Wrapper" style={{ background:bg, color: txt }}>
+    <div className="Wrapper" style={{ background: bg, color: txt }}>
       <div className="Navigation Wrapper-Inner">
         <HStack justifyContent="space-between">
           <NavLink className="Navigation__Links-First" to="/" replace>
@@ -120,21 +121,26 @@ const Navigation: FC = () => {
           onClose={onClose}
         >
           <AlertDialogOverlay zIndex="99999">
-            <AlertDialogContent marginTop={'20vh'} bg={bgMobMenu}>
+            <AlertDialogContent marginTop={"20vh"} bg={bgMobMenu}>
               <AlertDialogHeader fontSize="lg" fontWeight="bold">
                 trying to change theme mode...
               </AlertDialogHeader>
 
-              <AlertDialogBody>
-                Are you sure?
-              </AlertDialogBody>
+              <AlertDialogBody>Are you sure?</AlertDialogBody>
 
-              <AlertDialogFooter display='flex' justifyContent='space-between'>
-                <Button  ref={cancelRef} onClick={onClose}>
+              <AlertDialogFooter display="flex" justifyContent="space-between">
+                <Button ref={cancelRef} onClick={onClose}>
                   Cancel
                 </Button>
-                <Button colorScheme='orange' onClick={()=>{toggleColorMode(); onClose();}} ml={3}>
-                yes!
+                <Button
+                  colorScheme="orange"
+                  onClick={() => {
+                    toggleColorMode();
+                    onClose();
+                  }}
+                  ml={3}
+                >
+                  yes!
                 </Button>
               </AlertDialogFooter>
             </AlertDialogContent>

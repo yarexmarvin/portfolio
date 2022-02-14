@@ -8,7 +8,7 @@
   min-height: 100vh;
 }
 .Wrapper-Inner {
-  max-width: 50%;
+  max-width: 60%;
   width: 100%;
 }
 .Page-Wrapper {
@@ -24,7 +24,10 @@
   width: 100%;
   padding: 15px 0;
 }
-
+.Download-Btns a:hover,
+.Contact-List a:hover{
+  text-decoration: none;
+}
 .Navigation__Links-First {
   margin-right: 3vw;
   display: flex;
@@ -87,6 +90,11 @@
 }
 .Summary__Text {
   margin-top: 1vh;
+}
+.Summary__Text .chakra-code, 
+.Summary__Text span{
+  margin: 3px;
+  vertical-align: middle;
 }
 .Download-Btns {
   display: flex;
@@ -198,7 +206,11 @@
   justify-content: space-around;
   align-items: center;
 }
-
+@media(min-width: 1366px){
+  .Wrapper-Inner {
+    max-width: 50%;
+  }
+}
 @media (max-width: 960px) {
   .Wrapper-Inner {
     max-width: 80%;
@@ -291,5 +303,12 @@
   }
   .Skills-Wrapper-Inner{
     margin-right: 0;
+  }
+  .Contacts__EmailWrapper{
+    flex-wrap: wrap;
+
+  }
+  .Contacts__EmailWrapper button{
+    margin: 2vh 0;
   }
 }

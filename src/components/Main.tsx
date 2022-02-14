@@ -30,10 +30,11 @@ import {
 } from "react-icons/si";
 import { MdAlternateEmail } from "react-icons/md";
 import { IoDownloadOutline, IoDownloadSharp } from "react-icons/io5";
+import { VscGithub } from "react-icons/vsc";
 
 const Main: FC = () => {
   const borderColor = useColorModeValue("#CBD5E0", "rgba(255,255,255,0.7)");
-  const stickerImg = useColorModeValue(mainImgL, mainImg)
+  const stickerImg = useColorModeValue(mainImgL, mainImg);
   const toast = useToast();
   return (
     <div className="Page-Wrapper Wrapper-Inner">
@@ -106,14 +107,10 @@ const Main: FC = () => {
         <Text className="Summary__Text">
           <Icon as={FiChevronRight} />
           <Text as="strong">Responsible</Text>{" "}
-          <Code colorScheme="blue">Frontend Developer</Code> with experience in
-          cross-platform development of embedded applications based on{" "}
+          <Tag colorScheme='green'>Frontend Developer</Tag> with experience in
+         <Tag>cross-platform </Tag> development of embedded applications based on{" "}
           <Tag colorScheme="yellow">modern tools</Tag> for creating interactive{" "}
-          <Tag colorScheme="purple">User Interfaces</Tag>: JavaScript /
-          TypeScript with React and Redux / MobX
-          <br />
-          <Icon as={FiChevronRight} /> Able and prefer to work
-          <Code colorScheme="green">remotely</Code> and complete work on time.
+          <Tag colorScheme="purple">User Interfaces</Tag>;
           <br /> <Icon as={FiChevronRight} />
           <Text as="strong">Passionate about</Text>{" "}
           <Code>solving problems</Code>, fixing{" "}
@@ -121,7 +118,7 @@ const Main: FC = () => {
           <Tag colorScheme="pink">astonishing</Tag>layouts and ideas into
           finished applications.
           <br /> <Icon as={FiChevronRight} />
-          Striving to be <Code colorScheme="cyan">an expert</Code> in frontend
+          <Text as="strong">Striving to be</Text> <Code colorScheme="cyan">an expert</Code> in frontend
           development. Having a positive attitude towards constructive
           criticism, I perceive it as an indispensable and{" "}
           <Tag colorScheme="orange">powerful accelerator</Tag> for the rapid
@@ -143,6 +140,11 @@ const Main: FC = () => {
             Download CV
           </Button>
         </Link>
+        <Link href="https://github.com/yarexmarvin/" isExternal>
+          <Button variant="solid" colorScheme="gray" rightIcon={<VscGithub />}>
+            GitHub
+          </Button>
+        </Link>
         <Button
           variant="ghost"
           colorScheme="facebook"
@@ -159,6 +161,7 @@ const Main: FC = () => {
         >
           Download Cover Letter
         </Button>
+       
       </div>
     </div>
   );

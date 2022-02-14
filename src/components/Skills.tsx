@@ -20,8 +20,8 @@ import SkillBlock from "../blocks/SkillBlock";
 
 const Skills: FC = () => {
   const skills = useAppSelector((state) => state.skills);
-  const stickerCalmMode = useColorModeValue(stickerCalmL, stickerCalm)
-  const stickerMacMode = useColorModeValue(stickerMacL, stickerMac)
+  const stickerCalmMode = useColorModeValue(stickerCalmL, stickerCalm);
+  const stickerMacMode = useColorModeValue(stickerMacL, stickerMac);
   const borderColor = useColorModeValue("#CBD5E0", "rgba(255,255,255,0.7)");
   return (
     <div className="Page-Wrapper Wrapper-Inner">
@@ -29,9 +29,8 @@ const Skills: FC = () => {
         <div className="Skills-Wrapper-Inner">
           <Heading marginBottom={2.5}>I am a Frontend Developer </Heading>
           <Text as="kbd" className="Skills__Text">
-            I turn ideas and layouts into websites web&nbsp;applications, embodying
-            them into interactive&nbsp;<Kbd>User</Kbd>&nbsp;+&nbsp;<Kbd>Interfaces</Kbd>
-            connected to the server.
+            I turn ideas and layouts into websites web&nbsp;applications,
+            embodying them into connected to the server interactive&nbsp;<Kbd>User Interfaces</Kbd> 
           </Text>
         </div>
         <Image
@@ -42,22 +41,22 @@ const Skills: FC = () => {
         />
       </div>
       <List className="Skills__Environiment">
-            <ListItem>
-              <Heading size="sm">
-                <ListIcon as={GoBrowser} />
-                for browser environment:
-              </Heading>
-              <Kbd>
-                Desktop <ListIcon as={BsDisplay} />
-              </Kbd>
-              <Kbd>
-                Tablet <ListIcon as={BsTabletLandscape} />
-              </Kbd>
-              <Kbd>
-                Mobile <ListIcon as={BsPhone} />
-              </Kbd>
-            </ListItem>
-          </List>
+        <ListItem>
+          <Heading size="sm">
+            <ListIcon as={GoBrowser} />
+            for browser environment:
+          </Heading>
+          <Kbd>
+            Desktop <ListIcon as={BsDisplay} />
+          </Kbd>
+          <Kbd>
+            Tablet <ListIcon as={BsTabletLandscape} />
+          </Kbd>
+          <Kbd>
+            Mobile <ListIcon as={BsPhone} />
+          </Kbd>
+        </ListItem>
+      </List>
 
       <Heading className="Skills__Heading" size="lg">
         What I use:

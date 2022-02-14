@@ -25,7 +25,8 @@
   padding: 15px 0;
 }
 .Download-Btns a:hover,
-.Contact-List a:hover{
+.Contact-List a:hover,
+.Contacts__EmailWrapper a:hover{
   text-decoration: none;
 }
 .Navigation__Links-First {

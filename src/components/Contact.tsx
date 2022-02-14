@@ -103,11 +103,11 @@ const Contact: FC = () => {
         width="100%"
         direction="row"
       >
-        <LinkOverlay href="mailto:yarexmarvin@yahoo.com">
+        <Link href="mailto:yarexmarvin@yahoo.com">
           <Button leftIcon={<EmailIcon />} colorScheme="teal" variant="solid">
             Email
           </Button>
-        </LinkOverlay>
+        </Link>
 
         <Input
           flexShrink={1}

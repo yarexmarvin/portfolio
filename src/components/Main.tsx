@@ -83,8 +83,8 @@ const Main: FC = () => {
             <ListItem>
               <Code colorScheme={"messenger"}>
                 <ListIcon as={IoLanguageSharp} />
-                languages
-                {"  "}russian 🇷🇺 english 🇺🇸
+                speaking
+                {"  "}russian&nbsp;🇷🇺 english&nbsp;🇺🇸
               </Code>
             </ListItem>
             <ListItem>

@@ -11,6 +11,7 @@ import {
   List,
   ListIcon,
   ListItem,
+  Spinner,
   Stat,
   StatGroup,
   StatLabel,
@@ -118,8 +119,14 @@ const Skills: FC = () => {
           ))}
         </List>
         <div className="Skills__Imgs">
-          <StatGroup marginTop={5}>
+          <StatGroup
+            marginTop={5}
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+          >
             <Stat
+              opacity={codewars ? 1 : 0}
               className="CodeWars__inner"
               border={`5px solid ${borderColor}`}
             >
@@ -135,7 +142,12 @@ const Skills: FC = () => {
                 <Tag bgColor="#bb432c" color="#000">
                   Languages:
                 </Tag>{" "}
-                JavaScript, TypeScript{" "}
+                <Text as="kbd" fontWeight="bold" color="#FAF089">
+                  JavaScript
+                </Text>{" "}
+                <Text fontWeight="bold" marginLeft={2} as="kbd" color="#90cdf4">
+                  TypeScript
+                </Text>{" "}
               </StatLabel>
               <Box padding="0 2.5vw" margin="10px 0">
                 <Divider />
@@ -151,6 +163,7 @@ const Skills: FC = () => {
                 </Link>
               </Box>
             </Stat>
+            <Spinner display={codewars ? "none" : "block"} size="lg" />
           </StatGroup>
 
           <Image
@@ -160,14 +173,15 @@ const Skills: FC = () => {
             src={stickerCalmMode}
           />
 
-          <StatGroup>
+          <StatGroup display="flex" justifyContent="center" alignItems="center">
             <Stat
+              opacity={data ? 1 : 0}
               className="CodeWars__inner"
               border={`5px solid ${borderColor}`}
               padding="15px 30px"
             >
               <Box>
-                <Link href='https://leetcode.com/yarexmarvin/'>
+                <Link href="https://leetcode.com/yarexmarvin/">
                   <Button fontSize={20} colorScheme="yellow" isFullWidth>
                     Leetcode
                     <Icon margin="0 5px" as={SiLeetcode} />
@@ -175,13 +189,20 @@ const Skills: FC = () => {
                 </Link>
               </Box>
 
-              <StatLabel marginTop={3} fontSize={20}>Problem solved</StatLabel>
-              <StatNumber fontWeight={700} color='green.700' bgColor='whiteAlpha.900' letterSpacing={2}>
+              <StatLabel marginTop={3} fontSize={20}>
+                Problem solved
+              </StatLabel>
+              <StatNumber
+                fontWeight={700}
+                color="green.700"
+                bgColor="whiteAlpha.900"
+                letterSpacing={2}
+              >
                 {data &&
                   data.matchedUser?.submitStats?.acSubmissionNum?.[0]?.count}
               </StatNumber>
               <Container display="flex">
-                <Box margin={2} >
+                <Box margin={2}>
                   <StatLabel color="green.500">Easy</StatLabel>
                   <StatNumber>
                     {data &&
@@ -207,6 +228,7 @@ const Skills: FC = () => {
                 </Box>
               </Container>
             </Stat>
+            <Spinner display={data ? "none" : "block"} size="lg" />
           </StatGroup>
         </div>
       </div>

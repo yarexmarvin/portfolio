@@ -39,11 +39,6 @@ const Main: FC = () => {
     .then(res => res.json())
     .then(result => console.log(result))
   },[])
-  useEffect(()=>{
-    // @ts-ignore
-    fetch('https://leetcode.com/api/problems/algorithms/')
-    .then(result => console.log(result))
-  },[])
 
   const borderColor = useColorModeValue("#CBD5E0", "rgba(255,255,255,0.7)");
   const stickerImg = useColorModeValue(mainImgL, mainImg);

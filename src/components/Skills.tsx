@@ -1,14 +1,25 @@
 import {
+  Box,
+  Button,
+  Container,
+  Divider,
   Heading,
+  Icon,
   Image,
   Kbd,
+  Link,
   List,
   ListIcon,
   ListItem,
+  Stat,
+  StatGroup,
+  StatLabel,
+  StatNumber,
+  Tag,
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import { BsDisplay, BsPhone, BsTabletLandscape } from "react-icons/bs";
 import { GoBrowser } from "react-icons/go";
 import stickerCalm from "../assets/img/stickerCalm.png";
@@ -17,12 +28,50 @@ import stickerMac from "../assets/img/stickerMac.png";
 import stickerMacL from "../assets/img/stickerMacL.png";
 import { useAppSelector } from "../hooks/redux";
 import SkillBlock from "../blocks/SkillBlock";
+import { gql, useQuery } from "@apollo/client";
+import { SiCodewars, SiLeetcode } from "react-icons/si";
 
 const Skills: FC = () => {
   const skills = useAppSelector((state) => state.skills);
   const stickerCalmMode = useColorModeValue(stickerCalmL, stickerCalm);
   const stickerMacMode = useColorModeValue(stickerMacL, stickerMac);
   const borderColor = useColorModeValue("#CBD5E0", "rgba(255,255,255,0.7)");
+
+  const LeetCodeSchema = gql`
+    query getUserProfile($username: String!) {
+      matchedUser(username: $username) {
+        username
+        submitStats: submitStatsGlobal {
+          acSubmissionNum {
+            difficulty
+            count
+            submissions
+          }
+        }
+      }
+    }
+  `;
+
+  const [codewars, setCodeWars] = useState<number>(0);
+
+  const { loading, error, data } = useQuery(LeetCodeSchema, {
+    variables: {
+      username: "yarexmarvin",
+    },
+  });
+
+  useEffect(() => {
+    fetch("https://www.codewars.com/api/v1/users/yarexmarvin")
+      .then((res) => res.json())
+      .then((result) => setCodeWars(result.codeChallenges.totalCompleted));
+  }, []);
+
+  console.log("codewars => ", codewars);
+
+  console.log(error);
+  console.log(loading);
+  console.log("leetcode => ", data);
+
   return (
     <div className="Page-Wrapper Wrapper-Inner">
       <div className="Skills-Wrapper">
@@ -30,7 +79,8 @@ const Skills: FC = () => {
           <Heading marginBottom={2.5}>I am a Frontend Developer </Heading>
           <Text as="kbd" className="Skills__Text">
             I turn ideas and layouts into websites web&nbsp;applications,
-            embodying them into connected to the server interactive&nbsp;<Kbd>User Interfaces</Kbd> 
+            embodying them into connected to the server interactive&nbsp;
+            <Kbd>User Interfaces</Kbd>
           </Text>
         </div>
         <Image
@@ -68,12 +118,96 @@ const Skills: FC = () => {
           ))}
         </List>
         <div className="Skills__Imgs">
+          <StatGroup marginTop={5}>
+            <Stat
+              className="CodeWars__inner"
+              border={`5px solid ${borderColor}`}
+            >
+              <Image src="https://www.codewars.com/users/yarexmarvin/badges/large" />
+              <StatLabel className="CodeWars__Completed">
+                Total Completed Kata:{" "}
+                <Tag bgColor="#bb432c" color="#000">
+                  {codewars}
+                </Tag>
+              </StatLabel>
+              <StatLabel className="CodeWars__Languages">
+                {" "}
+                <Tag bgColor="#bb432c" color="#000">
+                  Languages:
+                </Tag>{" "}
+                JavaScript, TypeScript{" "}
+              </StatLabel>
+              <Box padding="0 2.5vw" margin="10px 0">
+                <Divider />
+              </Box>
+              <Box padding="0.5vh 2vw">
+                <Link
+                  className="CodeWars__Link"
+                  href="https://www.codewars.com/users/yarexmarvin"
+                >
+                  <Button isFullWidth className="CodeWars__Btn">
+                    Codewars <Icon color="#bb432c" as={SiCodewars} />
+                  </Button>
+                </Link>
+              </Box>
+            </Stat>
+          </StatGroup>
+
           <Image
             className="Skills__Img"
             border={`5px solid ${borderColor}`}
             boxSize={200}
             src={stickerCalmMode}
           />
+
+          <StatGroup>
+            <Stat
+              className="CodeWars__inner"
+              border={`5px solid ${borderColor}`}
+              padding="15px 30px"
+            >
+              <Box>
+                <Link href='https://leetcode.com/yarexmarvin/'>
+                  <Button fontSize={20} colorScheme="yellow" isFullWidth>
+                    Leetcode
+                    <Icon margin="0 5px" as={SiLeetcode} />
+                  </Button>
+                </Link>
+              </Box>
+
+              <StatLabel marginTop={3} fontSize={20}>Problem solved</StatLabel>
+              <StatNumber fontWeight={700} color='green.700' bgColor='whiteAlpha.900' letterSpacing={2}>
+                {data &&
+                  data.matchedUser?.submitStats?.acSubmissionNum?.[0]?.count}
+              </StatNumber>
+              <Container display="flex">
+                <Box margin={2} >
+                  <StatLabel color="green.500">Easy</StatLabel>
+                  <StatNumber>
+                    {data &&
+                      data.matchedUser?.submitStats?.acSubmissionNum?.[1]
+                        ?.count}
+                  </StatNumber>
+                </Box>
+                <Box margin={2}>
+                  <StatLabel color="orange.500">Medium</StatLabel>
+                  <StatNumber>
+                    {data &&
+                      data.matchedUser?.submitStats?.acSubmissionNum?.[2]
+                        ?.count}
+                  </StatNumber>
+                </Box>
+                <Box margin={2}>
+                  <StatLabel color="red.500">Hard</StatLabel>
+                  <StatNumber>
+                    {data &&
+                      data.matchedUser?.submitStats?.acSubmissionNum?.[3]
+                        ?.count}
+                  </StatNumber>
+                </Box>
+              </Container>
+            </Stat>
+          </StatGroup>
         </div>
       </div>
     </div>

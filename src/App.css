@@ -207,17 +207,49 @@
   justify-content: space-around;
   align-items: center;
 }
+
+/* codewars */
+.CodeWars__inner{
+  text-align: center;
+  box-sizing: border-box;
+  padding: 10px 5px;
+}
+.CodeWars__inner span{
+  margin: 0 1vw;
+  font-weight: 700;
+}
+.CodeWars__Completed,
+.CodeWars__Languages{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1vh 0;
+}
+.CodeWars__Btn{
+  display: flex;
+  align-items: center;
+}
+.CodeWars__Btn svg{
+  margin-left: 5px;
+  margin-top: 2px;
+}
+.chakra-link.CodeWars__Link:hover{
+  text-decoration: none;
+}
 @media(min-width: 1366px){
   .Wrapper-Inner {
     max-width: 50%;
   }
-}
-@media (max-width: 960px) {
-  .Wrapper-Inner {
-    max-width: 80%;
+  .Skills-Wrapper-Inner{
+    margin-right: 5vw;
   }
 }
-@media (max-width: 660px) {
+@media (max-width: 1200px) {
+  .Wrapper-Inner {
+    max-width: 70%;
+  }
+}
+@media (max-width: 1024px) {
   .Wrapper-Inner {
     max-width: 90%;
   }
@@ -285,6 +317,9 @@
   }
   .Skills img {
     margin: 30px 0 0;
+  }
+  .CodeWars__inner img{
+    margin: 5px 0;
   }
   .SKills__Img {
     margin-top: 2vh;

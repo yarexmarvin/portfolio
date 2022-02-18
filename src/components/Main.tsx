@@ -13,7 +13,7 @@ import {
   useColorModeValue,
   useToast,
 } from "@chakra-ui/react";
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import mainImg from "../assets/img/stickerHi.png";
 import mainImgL from "../assets/img/stickerHiL.png";
 import { BsDisplay } from "react-icons/bs";
@@ -33,9 +33,23 @@ import { IoDownloadOutline, IoDownloadSharp } from "react-icons/io5";
 import { VscGithub } from "react-icons/vsc";
 
 const Main: FC = () => {
+
+  useEffect(()=>{
+    fetch('https://www.codewars.com/api/v1/users/yarexmarvin')
+    .then(res => res.json())
+    .then(result => console.log(result))
+  },[])
+  useEffect(()=>{
+    // @ts-ignore
+    fetch('https://leetcode.com/api/problems/algorithms/')
+    .then(result => console.log(result))
+  },[])
+
   const borderColor = useColorModeValue("#CBD5E0", "rgba(255,255,255,0.7)");
   const stickerImg = useColorModeValue(mainImgL, mainImg);
   const toast = useToast();
+
+
   return (
     <div className="Page-Wrapper Wrapper-Inner">
       <div className="Introduction">

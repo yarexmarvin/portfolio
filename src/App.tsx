@@ -1,36 +1,25 @@
 import * as React from "react";
+
+// styles
 import "./App.css";
-import {
-  ChakraProvider,
-  ChakraProviderProps,
-  ColorMode,
-  ColorModeProviderProps,
-  GlobalStyle,
-  ThemeComponentProps,
-  ThemeConfig,
-} from "@chakra-ui/react";
-import { ColorModeSwitcher } from "./ColorModeSwitcher";
-import stickerHi from "./assets/img/stickerMac.png";
-import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
+
+// routing
+import { HashRouter, Route, Routes } from "react-router-dom";
+
+// apollo client
+import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
+
+// pages
 import Navigation from "./components/Navigation";
 import Main from "./components/Main";
 import Skills from "./components/Skills";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
+
+// chakra
+import { ChakraProvider, ThemeConfig } from "@chakra-ui/react";
 import { extendTheme } from "@chakra-ui/react";
-import {
-  GlobalStyleProps,
-  GlobalStyles,
-  mode,
-  Styles,
-} from "@chakra-ui/theme-tools";
-import {
-  ApolloClient,
-  InMemoryCache,
-  ApolloProvider,
-  useQuery,
-  gql,
-} from "@apollo/client";
+import { GlobalStyles, mode } from "@chakra-ui/theme-tools";
 
 export const App = () => {
   const config: ThemeConfig = {
@@ -56,16 +45,7 @@ export const App = () => {
     }),
   };
 
-  // const component = {
-  //   MenuList: {
-  //     baseStyle: (props: GlobalStyleProps) => ({
-  //       bg: mode('white', 'rgba(66, 66, 66)')(props)
-  //     })
-  //   }
-  // }
-
   const theme = extendTheme({
-    // component,
     config,
     styles,
   });

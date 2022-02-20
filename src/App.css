@@ -1,7 +1,6 @@
 .Wrapper {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
   width: 100%;
   height: 100%;
@@ -26,7 +25,7 @@
 }
 .Download-Btns a:hover,
 .Contact-List a:hover,
-.Contacts__EmailWrapper a:hover{
+.Contacts__EmailWrapper a:hover {
   text-decoration: none;
 }
 .Navigation__Links-First {
@@ -92,8 +91,8 @@
 .Summary__Text {
   margin-top: 1vh;
 }
-.Summary__Text .chakra-code, 
-.Summary__Text span{
+.Summary__Text .chakra-code,
+.Summary__Text span {
   margin: 3px;
   vertical-align: middle;
 }
@@ -138,10 +137,10 @@
 .Skills__List p {
   margin: 5px 3px;
 }
-.Skills__List li span{
+.Skills__List li span {
   margin: 5px 3px;
 }
-.Skills__List svg{
+.Skills__List svg {
   margin: 0 3px;
 }
 .Skills-Wrapper-Inner {
@@ -156,8 +155,8 @@
   justify-content: space-evenly;
   align-items: center;
 }
-.Skills__Imgs .Skills__Img{
-  margin:  5vh 0;
+.Skills__Imgs .Skills__Img {
+  margin: 5vh 0;
 }
 .Skills-Wrapper {
   display: flex;
@@ -209,38 +208,38 @@
 }
 
 /* codewars */
-.CodeWars__inner{
+.CodeWars__inner {
   text-align: center;
   box-sizing: border-box;
   padding: 10px 5px;
 }
-.CodeWars__inner span{
+.CodeWars__inner span {
   margin: 0 1vw;
   font-weight: 700;
 }
 .CodeWars__Completed,
-.CodeWars__Languages{
+.CodeWars__Languages {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 1vh 0;
 }
-.CodeWars__Btn{
+.CodeWars__Btn {
   display: flex;
   align-items: center;
 }
-.CodeWars__Btn svg{
+.CodeWars__Btn svg {
   margin-left: 5px;
   margin-top: 2px;
 }
-.chakra-link.CodeWars__Link:hover{
+.chakra-link.CodeWars__Link:hover {
   text-decoration: none;
 }
-@media(min-width: 1366px){
+@media (min-width: 1366px) {
   .Wrapper-Inner {
     max-width: 50%;
   }
-  .Skills-Wrapper-Inner{
+  .Skills-Wrapper-Inner {
     margin-right: 5vw;
   }
 }
@@ -300,7 +299,7 @@
     text-align: center;
     word-break: break-word;
   }
-  
+
   .Experience__Description {
     margin-top: 2vh;
   }
@@ -318,7 +317,7 @@
   .Skills img {
     margin: 30px 0 0;
   }
-  .CodeWars__inner img{
+  .CodeWars__inner img {
     margin: 5px 0;
   }
   .SKills__Img {
@@ -333,18 +332,17 @@
   .Skills-Wrapper {
     flex-direction: column;
   }
-  .Skills-Wrapper-Inner{
+  .Skills-Wrapper-Inner {
     text-align: center;
     margin-bottom: 3vh;
   }
-  .Skills-Wrapper-Inner{
+  .Skills-Wrapper-Inner {
     margin-right: 0;
   }
-  .Contacts__EmailWrapper{
+  .Contacts__EmailWrapper {
     flex-wrap: wrap;
-
   }
-  .Contacts__EmailWrapper button{
+  .Contacts__EmailWrapper button {
     margin: 2vh 0;
   }
 }

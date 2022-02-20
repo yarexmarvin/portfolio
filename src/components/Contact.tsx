@@ -110,6 +110,7 @@ const Contact: FC = () => {
         </Link>
 
         <Input
+        textAlign='center'
           flexShrink={1}
           onClick={copyEmail}
           className="Contacts__Email"

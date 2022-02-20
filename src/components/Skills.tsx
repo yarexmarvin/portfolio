@@ -1,4 +1,6 @@
 import {
+  Alert,
+  AlertIcon,
   Box,
   Button,
   Container,
@@ -36,6 +38,8 @@ const Skills: FC = () => {
   const skills = useAppSelector((state) => state.skills);
   const stickerCalmMode = useColorModeValue(stickerCalmL, stickerCalm);
   const stickerMacMode = useColorModeValue(stickerMacL, stickerMac);
+  const jsColor = useColorModeValue('#D69E2E', '#FAF089');
+  const tsColor = useColorModeValue('#2b6cb0','#90cdf4');
   const borderColor = useColorModeValue("#CBD5E0", "rgba(255,255,255,0.7)");
 
   const LeetCodeSchema = gql`
@@ -64,14 +68,9 @@ const Skills: FC = () => {
   useEffect(() => {
     fetch("https://www.codewars.com/api/v1/users/yarexmarvin")
       .then((res) => res.json())
-      .then((result) => setCodeWars(result.codeChallenges.totalCompleted));
+      .then((result) => setCodeWars(result.codeChallenges.totalCompleted))
+      .catch(err => setCodeWars(err));
   }, []);
-
-  console.log("codewars => ", codewars);
-
-  console.log(error);
-  console.log(loading);
-  console.log("leetcode => ", data);
 
   return (
     <div className="Page-Wrapper Wrapper-Inner">
@@ -119,6 +118,7 @@ const Skills: FC = () => {
           ))}
         </List>
         <div className="Skills__Imgs">
+          {/* codewars */}
           <StatGroup
             marginTop={5}
             display="flex"
@@ -133,19 +133,19 @@ const Skills: FC = () => {
               <Image src="https://www.codewars.com/users/yarexmarvin/badges/large" />
               <StatLabel className="CodeWars__Completed">
                 Total Completed Kata:{" "}
-                <Tag bgColor="#bb432c" color="#000">
+                <Tag bgColor="#bb432c" >
                   {codewars}
                 </Tag>
               </StatLabel>
               <StatLabel className="CodeWars__Languages">
                 {" "}
-                <Tag bgColor="#bb432c" color="#000">
+                <Tag bgColor="#bb432c" >
                   Languages:
                 </Tag>{" "}
-                <Text as="kbd" fontWeight="bold" color="#FAF089">
+                <Text  as="kbd" fontWeight="bold" color={jsColor}>
                   JavaScript
                 </Text>{" "}
-                <Text fontWeight="bold" marginLeft={2} as="kbd" color="#90cdf4">
+                <Text fontWeight="bold" marginLeft={2} as="kbd" color={tsColor}>
                   TypeScript
                 </Text>{" "}
               </StatLabel>
@@ -173,9 +173,10 @@ const Skills: FC = () => {
             src={stickerCalmMode}
           />
 
+          {/* leetcode */}
           <StatGroup display="flex" justifyContent="center" alignItems="center">
             <Stat
-              opacity={data ? 1 : 0}
+              display={data ? "block" : "none"}
               className="CodeWars__inner"
               border={`5px solid ${borderColor}`}
               padding="15px 30px"
@@ -228,7 +229,13 @@ const Skills: FC = () => {
                 </Box>
               </Container>
             </Stat>
-            <Spinner display={data ? "none" : "block"} size="lg" />
+            <Spinner display={loading ? "block" : "none"} size="lg" />
+            {error && (
+              <Alert status="error">
+                <AlertIcon />
+                There was an error in recieving data from leetcode
+              </Alert>
+            )}
           </StatGroup>
         </div>
       </div>

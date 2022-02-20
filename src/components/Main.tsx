@@ -13,7 +13,7 @@ import {
   useColorModeValue,
   useToast,
 } from "@chakra-ui/react";
-import { FC, useEffect } from "react";
+import { FC } from "react";
 import mainImg from "../assets/img/stickerHi.png";
 import mainImgL from "../assets/img/stickerHiL.png";
 import { BsDisplay } from "react-icons/bs";
@@ -33,12 +33,6 @@ import { IoDownloadOutline, IoDownloadSharp } from "react-icons/io5";
 import { VscGithub } from "react-icons/vsc";
 
 const Main: FC = () => {
-
-  useEffect(()=>{
-    fetch('https://www.codewars.com/api/v1/users/yarexmarvin')
-    .then(res => res.json())
-    .then(result => console.log(result))
-  },[])
 
   const borderColor = useColorModeValue("#CBD5E0", "rgba(255,255,255,0.7)");
   const stickerImg = useColorModeValue(mainImgL, mainImg);
@@ -62,7 +56,7 @@ const Main: FC = () => {
             <ListItem>
               <Code colorScheme="green">
                 <ListIcon as={AiOutlineCode} />
-                current stack {"  "}
+                current tech stack {"  "}
                 <ListIcon
                   fontSize="sm"
                   className="Tech-Icon"
@@ -92,8 +86,8 @@ const Main: FC = () => {
             <ListItem>
               <Code colorScheme={"messenger"}>
                 <ListIcon as={IoLanguageSharp} />
-                speaking
-                {"  "}russian&nbsp;🇷🇺 english&nbsp;🇺🇸
+                speak
+                {"  "}russian&nbsp;🇷🇺  english&nbsp;🇺🇸
               </Code>
             </ListItem>
             <ListItem>

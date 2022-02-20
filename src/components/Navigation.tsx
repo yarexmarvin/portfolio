@@ -6,10 +6,8 @@ import {
   AlertDialogHeader,
   AlertDialogOverlay,
   Avatar,
-  background,
   Box,
   Button,
-  Flex,
   Heading,
   HStack,
   IconButton,
@@ -27,7 +25,6 @@ import React, { FC, useRef, useState } from "react";
 import { NavLink, Outlet, useNavigate } from "react-router-dom";
 import { ColorModeSwitcher } from "../ColorModeSwitcher";
 import navImg from "../assets/img/stickerSmile.png";
-import { VscGithub } from "react-icons/vsc";
 
 const Navigation: FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -92,6 +89,7 @@ const Navigation: FC = () => {
           <Box display="flex">
             <ColorModeSwitcher onClick={changeColor} justifySelf="flex-end" />
 
+            {/* navigation for mobile devices */}
             <div className="Navigation-Mobile">
               <Menu>
                 <MenuButton
@@ -113,6 +111,8 @@ const Navigation: FC = () => {
             </div>
           </Box>
         </HStack>
+
+
 
         {/* alert */}
         <AlertDialog

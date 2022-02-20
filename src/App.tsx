@@ -10,7 +10,6 @@ import {
   ThemeConfig,
 } from "@chakra-ui/react";
 import { ColorModeSwitcher } from "./ColorModeSwitcher";
-import { Logo } from "./Logo";
 import stickerHi from "./assets/img/stickerMac.png";
 import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
 import Navigation from "./components/Navigation";
@@ -72,7 +71,7 @@ export const App = () => {
   });
 
   const client = new ApolloClient({
-    uri: "https://salty-waters-49462.herokuapp.com/leetcode.com/graphql",
+    uri: "https://salty-waters-49462.herokuapp.com/https://leetcode.com/graphql",
     cache: new InMemoryCache(),
   });
 

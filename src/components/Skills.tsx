@@ -119,7 +119,7 @@ const Skills: FC = () => {
         </List>
         <div className="Skills__Imgs">
           {/* codewars */}
-          <StatGroup
+          {/* <StatGroup
             marginTop={5}
             display="flex"
             justifyContent="center"
@@ -164,7 +164,7 @@ const Skills: FC = () => {
               </Box>
             </Stat>
             <Spinner display={codewars ? "none" : "block"} size="lg" />
-          </StatGroup>
+          </StatGroup> */}
 
           <Image
             className="Skills__Img"
@@ -174,7 +174,7 @@ const Skills: FC = () => {
           />
 
           {/* leetcode */}
-          <StatGroup display="flex" justifyContent="center" alignItems="center">
+          {/* <StatGroup display="flex" justifyContent="center" alignItems="center">
             <Stat
               display={data ? "block" : "none"}
               className="CodeWars__inner"
@@ -236,7 +236,7 @@ const Skills: FC = () => {
                 There was an error in recieving data from leetcode
               </Alert>
             )}
-          </StatGroup>
+          </StatGroup> */}
         </div>
       </div>
     </div>

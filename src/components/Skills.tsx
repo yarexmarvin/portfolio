@@ -57,20 +57,20 @@ const Skills: FC = () => {
     }
   `;
 
-  const [codewars, setCodeWars] = useState<number>(0);
+  // const [codewars, setCodeWars] = useState<number>(0);
 
-  const { loading, error, data } = useQuery(LeetCodeSchema, {
-    variables: {
-      username: "yarexmarvin",
-    },
-  });
+  // const { loading, error, data } = useQuery(LeetCodeSchema, {
+  //   variables: {
+  //     username: "yarexmarvin",
+  //   },
+  // });
 
-  useEffect(() => {
-    fetch("https://www.codewars.com/api/v1/users/yarexmarvin")
-      .then((res) => res.json())
-      .then((result) => setCodeWars(result.codeChallenges.totalCompleted))
-      .catch(err => setCodeWars(err));
-  }, []);
+  // useEffect(() => {
+  //   fetch("https://www.codewars.com/api/v1/users/yarexmarvin")
+  //     .then((res) => res.json())
+  //     .then((result) => setCodeWars(result.codeChallenges.totalCompleted))
+  //     .catch(err => setCodeWars(err));
+  // }, []);
 
   return (
     <div className="Page-Wrapper Wrapper-Inner">
